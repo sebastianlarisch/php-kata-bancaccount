@@ -8,6 +8,9 @@ final class BankAccount
 {
     private float $balance;
 
+    /**
+     * @var list<MoneyTransfer>
+     */
     private array $moneyTransfers = [];
 
     public function __construct(float $defaultBalance = 0.00)
@@ -20,6 +23,9 @@ final class BankAccount
         return $this->balance;
     }
 
+    /**
+     * @return list<MoneyTransfer>
+     */
     public function getMoneyTransfers(): array
     {
         return $this->moneyTransfers;
