@@ -25,13 +25,13 @@ final class BankAccount
         return $this->moneyTransfers;
     }
 
-    public function add(float $amount, ?string $date = ''): void
+    public function add(float $amount, string $date = ''): void
     {
         $this->balance += $amount;
         $this->moneyTransfers[] = new MoneyTransfer($amount, $this->balance, $date);
     }
 
-    public function withdraw(float $amount, ?string $date = ''): void
+    public function withdraw(float $amount, string $date = ''): void
     {
         $this->balance -= $amount;
         $this->moneyTransfers[] = new MoneyTransfer($amount, $this->balance, $date);

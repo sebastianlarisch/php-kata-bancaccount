@@ -12,7 +12,7 @@ final class MoneyTransfer
     public float $amount;
     public float $balance;
 
-    public function __construct(float $amount, float $balance, ?string $date = '')
+    public function __construct(float $amount, float $balance, string $date = '')
     {
         $this->date = (new DateTimeImmutable($date))->format('Y-m-d');
         $this->balance = $balance;
